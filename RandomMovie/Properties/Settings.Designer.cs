@@ -12,7 +12,7 @@ namespace RandomMovie.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.5.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,7 +25,7 @@ namespace RandomMovie.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files (x86)\\MPC-HC\\mpc-hc.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string mpcText {
             get {
                 return ((string)(this["mpcText"]));
@@ -37,7 +37,7 @@ namespace RandomMovie.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files\\VideoLAN\\VLC\\vlc.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string vlcText {
             get {
                 return ((string)(this["vlcText"]));
@@ -61,7 +61,6 @@ namespace RandomMovie.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool checkStatus1 {
             get {
                 return ((bool)(this["checkStatus1"]));
@@ -73,7 +72,6 @@ namespace RandomMovie.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool checkStatus2 {
             get {
                 return ((bool)(this["checkStatus2"]));
@@ -128,6 +126,30 @@ namespace RandomMovie.Properties {
             }
             set {
                 this["browse1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public decimal numericValue {
+            get {
+                return ((decimal)(this["numericValue"]));
+            }
+            set {
+                this["numericValue"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string potText {
+            get {
+                return ((string)(this["potText"]));
+            }
+            set {
+                this["potText"] = value;
             }
         }
     }

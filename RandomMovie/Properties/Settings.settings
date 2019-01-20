@@ -3,19 +3,19 @@
   <Profiles />
   <Settings>
     <Setting Name="mpcText" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Program Files (x86)\MPC-HC\mpc-hc.exe</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="vlcText" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Program Files\VideoLAN\VLC\vlc.exe</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="defPlay" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="checkStatus1" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="checkStatus2" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="browse2" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -27,8 +27,13 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="browse1" Type="System.String" Scope="User">
-      <Value Profile="(Default)">
-                </Value>
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="numericValue" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="potText" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>
