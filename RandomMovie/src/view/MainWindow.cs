@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
@@ -99,31 +94,39 @@ namespace RandomMovie.src.view
         // GO! Button Button
         private void button2_Click(object sender, EventArgs e)
         {
-            String fileName, arguments;
+            String fileName, arguments, chosenFile;
 
+            chosenFile = chooseFile();
+            arguments = "\"" + chosenFile;
+
+            // If MPC-HC is chosen
             if (radioButton1.Checked)
             {
                 fileName = textBox2.Text;
-                arguments = "\"" + chooseFile();
                 if (checkBox1.Checked) arguments += "\" /startpos 00:" + numericUpDown1.Value + ":00";
                 if (checkBox2.Checked) arguments += " /fullscreen";
             }
+            // If Potplayer is chosen
             else if (radioButton3.Checked)
             {
                 fileName = textBox7.Text;
-                arguments = "\"" + chooseFile();
                 if (checkBox1.Checked) arguments += "\" /seek=00:" + numericUpDown1.Value + ":00";
-                if (checkBox2.Checked) arguments += "";
             }
+            // Otherwise VLC is chosen
             else
             {
                 fileName = textBox3.Text;
-                arguments = "\"" + chooseFile();
                 if (checkBox1.Checked) arguments += "\" --start-time=" + numericUpDown1.Value*60;
                 if (checkBox2.Checked) arguments += " -f";
 
             }
+
+            // Set the text to the chosen file and start the process
+            richTextBox2.Text = Path.GetFileNameWithoutExtension(chosenFile);
             Process.Start(fileName, arguments);
+
+            // If PotPlayer is chosen, this will send the Enter key to go fullscreen
+            if(radioButton3.Checked && checkBox2.Checked) SendKeys.Send("{ENTER}");
 
         }
 
@@ -147,7 +150,6 @@ namespace RandomMovie.src.view
 
             // Choose random file and output path to text box
             var chosenFile = files.ElementAt(rand.Next(0, files.Count()));
-            richTextBox2.Text = Path.GetFileNameWithoutExtension(chosenFile);
             return chosenFile;
         }
 
